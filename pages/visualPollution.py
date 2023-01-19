@@ -20,7 +20,7 @@ def app():
     header=st.container()
     result_all = st.container()
     with header:
-        st.subheader("Detect crop and weed in image")
+        st.subheader("Detect visual pollution in image")
         image_file = st.file_uploader("Upload Image", type=["png","jpg","jpeg"])
         if image_file is not None:
             # To See details
@@ -30,7 +30,7 @@ def app():
 
             # To View Uploaded Image
             st.image(load_image(image_file)
-                ,width=250
+                ,width=500
                 )
             fname=image_file.name
             image_file=os.path.join("data",fname)
@@ -39,7 +39,7 @@ def app():
             proxy_img_file="data/"+fname
             img = Image.open(proxy_img_file)
             image_file=os.path.join(cur_dir,proxy_img_file)
-            st.image(img,width=250)            
+            st.image(img,width=500)            
 
 
     with result_all:     
@@ -50,7 +50,7 @@ def app():
         image_file_output="yolov5/runs/detect/TestModel/"+fname
         img = Image.open(image_file_output)
         st.subheader("Crop and Weed Detections")    
-        st.image(img,width=250)            
+        st.image(img,width=500)            
         
 
         
