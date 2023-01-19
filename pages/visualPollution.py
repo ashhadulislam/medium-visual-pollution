@@ -49,7 +49,7 @@ def app():
         detect.run(weights=weight_path,name="TestModel", source=image_file)  
         image_file_output="yolov5/runs/detect/TestModel/"+fname
         img = Image.open(image_file_output)
-        st.subheader("Crop and Weed Detections")    
+        st.subheader("Visual Pollution Detections")    
         st.image(img,width=500)            
         
 
