@@ -6,7 +6,7 @@ from PIL import  Image
 # Custom imports 
 from multipage import MultiPage
 
-from pages import cropAnalysis
+from pages import visualPollution
 # Create an instance of the app 
 app = MultiPage()
 
@@ -23,7 +23,7 @@ st.text("Detect crops and weeds")
 # col2.title("Data Storyteller Application")
 
 # Add all your application here
-app.add_page("Crop Vs Weed", cropAnalysis.app)
+app.add_page("Visual Pollution", visualPollution.app)
 # app.add_page("Detect Disaster Type", detectDisaster.app)
 
 
